@@ -1,0 +1,190 @@
+:root {
+	--main-hue: 175;
+	--main-bg-1: hsla(var(--main-hue), 50%, 40%, 1);
+	--main-bg-2: hsla(var(--main-hue), 50%, 20%, 1);
+	--main-bg-3: hsla(var(--main-hue), 50%, 7%, 1);
+	--bezier: all 0.2s cubic-bezier(0.1, -2.2, 1, 2.2);
+}
+
+html {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+	line-height: 1.6em;
+	letter-spacing: 0.05em;
+}
+
+b {
+	font-weight: 700;
+}
+
+body {
+	background: #3f3f3f;
+	background: radial-gradient(
+		circle,
+		var(--main-bg-1, gray),
+		var(--main-bg-2, gray) 16em,
+		var(--main-bg-3, black)
+	);
+	background-attachment: fixed;
+}
+
+html,
+body {
+	/* height: 100%; */
+	/* width: 100%; */
+	margin: 0;
+	padding: 0;
+	/* display: initial; */
+}
+
+a {
+	color: white;
+}
+
+.main {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media all and (min-width: 40em) {
+	.main {
+		width: 38em;
+	}
+}
+
+header,
+footer {
+	padding: 2em 0;
+}
+
+header, footer {
+	background-color: rgba(0,0,0,0.07);
+}
+
+header {
+	letter-spacing: 0.2em;
+	font-size: 1.8em;
+	padding-top: 2.4em;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+}
+
+.iamgrid_logo {
+	width: 4.4em;
+}
+
+.iamgrid_logo_black {
+	display: none;
+}
+
+a {
+	color: rgba(255, 255, 255, 0.7);
+	transition: var(--bezier);
+}
+
+a:hover {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+section {
+	padding: 2em 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+section:last-child {
+	border-bottom: 0;
+}
+
+footer {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+section h1 {
+	margin: 0;
+	font-size: 0.8em;
+	letter-spacing: 1.4em;
+	margin-right: -1.4em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0 0.6em 0;
+}
+
+@media all and (min-width: 34em) {
+	section h1 {
+		margin-right: 0;
+	}
+	section h1::before,
+	section h1::after {
+		content: "- - -";
+		color: rgba(255, 255, 255, 0.3);
+		padding: 0 1em;
+		font-size: 2em;
+		letter-spacing: normal;
+	}
+	section h1::before {
+		margin-right: 0.7em;
+	}
+}
+
+section h2 {
+	font-size: 0.8em;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6em 0 0 0;
+}
+
+.milestone {
+	padding: 9px 0;
+}
+
+.milestone__year {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.milestone__event {
+	padding-top: 6px;
+}
+
+.milestone__event:first-child {
+	padding-top: 0;
+}
+
+.nospam {
+	display: none;
+}
+
+.profiles_container {
+	text-align: center;
+	margin: 1em 0;
+}
+
+.profiles_container a {
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 0.3em;
+	text-decoration: none;
+	padding: 0.1em 0.4em;
+	margin: 0.4em 0.2em;
+	font-size: 0.8em;
+	transition: var(--bezier);
+}
+
+.profiles_container a:hover {
+	background: rgba(255, 255, 255, 0.25);
+}
