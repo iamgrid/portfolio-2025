@@ -17,6 +17,7 @@ module.exports = {
 			directory: path.join(__dirname, "./assets"),
 			publicPath: "/assets",
 		},
+		hot: false, // Disable hot module replacement
 	},
 	module: {
 		rules: [

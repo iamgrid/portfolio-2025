@@ -30,7 +30,7 @@
 				<p>Hello there, welcome!</p>
 				<p>
 					This here is the personal/business website of <b>Andy Pataki</b>, a
-					Freelance Full Stack (Web) Developer.
+					Freelance Full Stack Developer.
 				</p>
 				<p>
 					I specialize in "<a
@@ -47,77 +47,172 @@
 				</p>
 			</section>
 			<section class="milestones">
-				<h1>Dev Milestones</h1>
-				<div class="milestone">
-					<div class="milestone__year">1999</div>
-					<div class="milestone__event">
-						The first time I published an <b>HTML</b> page on the internet.
-					</div>
-				</div>
-				<div class="milestone">
-					<div class="milestone__year">2002</div>
-					<div class="milestone__event">
-						The first time I got paid to make HTML pages for a company.
-					</div>
-				</div>
-				<div class="milestone">
-					<div class="milestone__year">2004</div>
-					<div class="milestone__event">
-						The first time I got paid to execute based on a Photoshop website
-						mockup by building it with HTML and styling it completely with
-						<b>CSS</b>.
-					</div>
-				</div>
-				<div class="milestone">
-					<div class="milestone__year">2005</div>
-					<div class="milestone__event">
-						The first time I got paid to build a full stack web app (<b
-							>PHP+MySQL</b
-						>
-						back-end, HTML+CSS front-end with minimal plain JavaScript).
-					</div>
-				</div>
-				<div class="milestone">
-					<div class="milestone__year">2007</div>
-					<div class="milestone__event">
-						The first time I got paid to build something (a folder structure
-						browser within a web app) that took real advantage of
-						<b>JavaScript and AJAX</b>.
-					</div>
-				</div>
-				<div class="milestone">
-					<div class="milestone__year">2021</div>
-					<div class="milestone__event">
-						The first time I got paid to build a web app using my currently
-						preferred set of front-end technologies (<b
-							>React, TypeScript and CSS BEM</b
-						>).
-					</div>
-					<div class="milestone__event">
-						The first time I got paid to build something serious with
-						<b>SuiteScript 2.1</b> (the scripting language for the NetSuite ERP
-						platform).
-					</div>
-				</div>
-			</section>
-			<section class="contact">
-				<h1>Contact</h1>
-				<p>
-					E-mail:
-					<b
-						>andy<span class="nospam">XX</span>@<span class="nospam">XX</span
-						>iamgrid.co.uk</b
+				<h1>Professional Milestones</h1>
+				<div class="portfolio-radioset">
+					<button
+						type="button"
+						role="radio"
+						name="milestones__radio"
+						id="milestones__DEV-radio"
+						aria-checked="true"
+						onClick="window.milestones.selectView('DEV')"
 					>
-				</p>
+						Development
+					</button>
+					<button
+						type="button"
+						role="radio"
+						name="milestones__radio"
+						id="milestones__DESIGN-radio"
+						onClick="window.milestones.selectView('DESIGN')"
+					>
+						Design
+					</button>
+				</div>
+				<div class="milestones__wrapper" id="milestones-wrapper">
+					<div
+						id="milestones__DEV"
+						class="milestones__view milestones__view--active"
+					>
+						<div class="milestones__tldr">
+							TL;DR: I started working with HTML in 2002, CSS in 2004, PHP and
+							MySQL in 2005, JavaScript in 2007, React in 2018, TypeScript and
+							SuiteScript in 2021.
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">1999</div>
+							<div class="milestone__event">
+								Published my first <b>HTML</b> page on the internet.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2002</div>
+							<div class="milestone__event">
+								The first time I used <b>HTML</b> in a professional capacity.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2004</div>
+							<div class="milestone__event">
+								The first time I got paid to execute based on a Photoshop
+								website mockup by building it with <b>HTML</b> and styling it
+								completely with <b>CSS</b>.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2005</div>
+							<div class="milestone__event">
+								Built my first full stack web app (<b>PHP+MySQL</b>
+								back-end, HTML+CSS front-end with minimal plain JavaScript).
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2007</div>
+							<div class="milestone__event">
+								The first time I got paid to build something (a folder structure
+								browser within a web app) that took real advantage of
+								<b>JavaScript and AJAX</b>.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2017</div>
+							<div class="milestone__event">
+								Decided to let go of design work and focus exclusively on web
+								development. I spent a lot of the following few years studying
+								Algorithms and Data Structures, Accessibility and advanced
+								JavaScript with a strong focus on React.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2018</div>
+							<div class="milestone__event">
+								The first time I built something in <b>React</b> (an admin app
+								for a small hiring platform) that other people actually used to
+								accomplish work.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2021</div>
+							<div class="milestone__event">
+								The first time I used my currently preferred set of front-end
+								technologies (<b>React, TypeScript and CSS BEM</b>) in a
+								professional setting.
+							</div>
+							<div class="milestone__event">
+								The first time I got paid to build something serious with
+								<b>SuiteScript 2.1</b> (the scripting language for the NetSuite
+								ERP platform).
+							</div>
+						</div>
+					</div>
+					<div id="milestones__DESIGN" class="milestones__view">
+						<div class="milestones__tldr">
+							TL;DR: Before becoming a full-time developer I spent over a decade
+							as a web designer. I have extensive experience with Photoshop,
+							Illustrator and Balsamiq. I'm somewhat proficient in Premiere Pro
+							and started dabbling in Figma in 2025. See
+							<a
+								target="_blank"
+								href="https://www.flickr.com/photos/203362237@N03/albums/72177720328440647/"
+								>this Flickr album</a
+							>
+							for examples of my design work over the years.
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2002</div>
+							<div class="milestone__event">
+								The first time I used <b>Adobe Photoshop</b> in a professional
+								capacity.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2003</div>
+							<div class="milestone__event">
+								The first time I used <b>Adobe Illustrator</b> in a professional
+								capacity. Over the years I designed quite a few logos and
+								dabbled in some Design-to-Print work.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2004</div>
+							<div class="milestone__event">
+								Started my own company as a freelance web designer. Creating
+								website mockups in Photoshop and iterating on them based on
+								client feedback became my standard step #1.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2013</div>
+							<div class="milestone__event">
+								Became a hybrid designer/developer at a small Hungarian IT firm.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2015</div>
+							<div class="milestone__event">
+								Used <b>Balsamiq</b> for UX work on a more serious software
+								project (a combination CRM and project management tool) for the
+								first time.
+							</div>
+							<div class="milestone__event">
+								The first time I used Adobe Premiere Pro in a professional
+								capacity.
+							</div>
+						</div>
+						<div class="milestone">
+							<div class="milestone__year">2025</div>
+							<div class="milestone__event">
+								Used <b>Figma</b> to create my latest resume.
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section class="profiles">
-				<h1>Profiles</h1>
+				<h1>Socials, etc.</h1>
 				<div class="profiles_container">
 					<a href="https://github.com/iamgrid" target="_blank"
 						>GitHub: iamgrid</a
-					>
-					<a href="https://codesandbox.io/u/iamgrid/sandboxes" target="_blank"
-						>CodeSandbox: iamgrid</a
 					>
 					<a href="https://codepen.io/anpataki/pens/public" target="_blank"
 						>CodePen: anpataki</a
@@ -136,15 +231,10 @@
 					<a href="https://www.strava.com/athletes/155035778" target="_blank"
 						>Strava</a
 					>
-					<a
-						href="https://www.youtube.com/channel/UCsqaaL6B1xvnWk_QYOxy-kA"
-						target="_blank"
-						>YouTube</a
+					<h2>Sites I'm mostly inactive on:</h2>
+					<a href="https://codesandbox.io/u/iamgrid/sandboxes" target="_blank"
+						>CodeSandbox: iamgrid</a
 					>
-					<a href="https://soundcloud.com/i_am_grid" target="_blank"
-						>SoundCloud: i_am_grid</a
-					>
-					<h2>Socials I'm mostly inactive on:</h2>
 					<a href="https://www.linkedin.com/in/andraspataki/" target="_blank"
 						>LinkedIn: andraspataki</a
 					>
@@ -154,7 +244,25 @@
 					<a href="https://www.facebook.com/pataki.andras.paks" target="_blank"
 						>Facebook: pataki.andras.paks</a
 					>
+					<a
+						href="https://www.youtube.com/channel/UCsqaaL6B1xvnWk_QYOxy-kA"
+						target="_blank"
+						>YouTube</a
+					>
+					<a href="https://soundcloud.com/i_am_grid" target="_blank"
+						>SoundCloud: i_am_grid</a
+					>
 				</div>
+			</section>
+			<section class="contact">
+				<h1>Contact</h1>
+				<p>
+					E-mail:
+					<b
+						>andy<span class="nospam">XX</span>@<span class="nospam">XX</span
+						>iamgrid.co.uk</b
+					>
+				</p>
 			</section>
 		</div>
 		<footer>2019-2025, i_am_grid</footer>

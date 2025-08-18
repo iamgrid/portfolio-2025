@@ -16,6 +16,10 @@ html {
 	letter-spacing: 0.05em;
 }
 
+button {
+	font-family: "Roboto", sans-serif;
+}
+
 b {
 	font-weight: 700;
 }
@@ -132,6 +136,7 @@ section h1 {
 		padding: 0 1em;
 		font-size: 2em;
 		letter-spacing: normal;
+		width: 3em;
 	}
 	section h1::before {
 		margin-right: 0.7em;
@@ -146,6 +151,73 @@ section h2 {
 	align-items: center;
 	justify-content: center;
 	padding: 0.6em 0 0 0;
+}
+
+.portfolio-radioset {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: center;
+	padding-bottom: 0.4em;
+}
+
+.portfolio-radioset button {
+	display: block;
+	width: 11em;
+	background-color: rgba(255, 255, 255, 0.12);
+	color: #ffffffa0;
+	padding: 0.4em 0;
+	border: 0;
+	border-right: 1px solid #ffffff60;
+	border-left: 1px solid #ffffff60;
+	cursor: pointer;
+	font-size: 0.8em;
+	transition: all 0.25s;
+}
+
+.portfolio-radioset button:hover {
+	color: #ffffffc0;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.portfolio-radioset button:first-child {
+	border-left-width: 0;
+	border-radius: 4px 0 0 4px;
+}
+
+.portfolio-radioset button:last-child {
+	border-right-width: 0;
+	border-left: 1px solid #ffffff60;
+	border-radius: 0 4px 4px 0;
+}
+
+.portfolio-radioset button[aria-checked='true'] {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: white;
+	cursor: default;
+}
+
+.portfolio-radioset button[aria-checked='true']:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.milestones .portfolio-radioset {
+	margin-top: 1em;
+}
+
+.milestones__view {
+	display: none;
+}
+
+.milestones__view--active {
+	display: block;
+}
+
+.milestones__tldr {
+	/* font-style: italic; */
+	font-weight: bold;
+	/* font-size: 0.8em; */
+	color: rgba(255, 255, 255, 0.6);
+	padding: 0.6em 0;
 }
 
 .milestone {
