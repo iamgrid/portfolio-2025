@@ -1,4 +1,4 @@
-import * as css from "./style/index.css";
+import * as css from "./index.css";
 
 ("use strict");
 const HueChanger = {

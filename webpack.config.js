@@ -9,6 +9,7 @@ module.exports = {
 		filename: "iamgrid.bundle.[contenthash].js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true, // Clean the output directory before emit
+		hashDigestLength: 8,
 	},
 	devServer: {
 		port: 8080,
@@ -23,7 +24,15 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, "css-loader"],
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: "css-loader",
+						options: {
+							url: false, // disable url processing
+						},
+					},
+				],
 			},
 		],
 	},
