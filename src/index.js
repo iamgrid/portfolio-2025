@@ -54,3 +54,15 @@ window.milestones = {
 		milestones.selectedView = milestones.VIEW_IDS[viewId];
 	},
 };
+
+window.scrollToSection = function (sectionId) {
+	const functionSignature = "index.js@scrollToSection()";
+	console.log(functionSignature, { sectionId });
+
+	const sectionEl = document.getElementById(sectionId);
+	if (!sectionEl) {
+		throw new Error(`No section found with ID: ${sectionId}`);
+	}
+
+	sectionEl.scrollIntoView({ behavior: "smooth" });
+};
