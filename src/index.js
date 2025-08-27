@@ -65,4 +65,5 @@ window.scrollToSection = function (sectionId) {
 	}
 
 	sectionEl.scrollIntoView({ behavior: "smooth" });
+	window.history.pushState(null, "", `#${sectionId}`);
 };
