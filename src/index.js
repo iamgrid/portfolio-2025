@@ -70,7 +70,7 @@ const IAG = {
 		navigator.clipboard
 			.writeText(email)
 			.then(() => {
-				alert(`Email address (${email}) copied to clipboard.`);
+				alert(`My email address (${email}) was copied to your clipboard.`);
 			})
 			.catch((err) => {
 				console.error("Failed to copy text to clipboard: ", err);
@@ -81,10 +81,10 @@ const IAG = {
 		const topLinkEl = document.getElementById("top-link");
 		if (window.scrollY > 100) {
 			if (!IAG.backToTopLinkIsVisible) {
-				topLinkEl.style.display = "block";
+				topLinkEl.style.display = "grid";
 				IAG.backToTopLinkIsVisible = true;
 				setTimeout(() => {
-					topLinkEl.style.opacity = "1";
+					topLinkEl.style.opacity = "0.5";
 				}, 100);
 			}
 		} else {
