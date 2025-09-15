@@ -12,7 +12,7 @@
 		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<header>
+		<header id="top">
 			<img
 				src="./assets/iamgrid_logo_white.svg"
 				class="iamgrid_logo"
@@ -97,16 +97,6 @@
 						>SoundCloud: i_am_grid</a
 					>
 				</div>
-			</section>
-			<section class="contact" id="contact">
-				<h1><span>Contact</span></h1>
-				<p>
-					E-mail:
-					<b
-						>andy<span class="nospam">XX</span>@<span class="nospam">XX</span
-						>iamgrid.co.uk</b
-					>
-				</p>
 			</section>
 			<section class="milestones" id="professional-milestones">
 				<h1><span>Professional Milestones</span></h1>
@@ -331,6 +321,44 @@
 				</div>
 			</section>
 		</div>
-		<footer>2019-2025, i_am_grid</footer>
+		<footer>
+			<div class="footer__proper">
+				<section class="footer__section footer__section--left">
+					<div class="footer__logo-wrapper">
+						<a onclick="IAG.scrollToSection('top')" title="Back to top">
+							<img
+								src="./assets/iamgrid_logo_white.svg"
+								class="iamgrid_logo"
+								alt="i_am_grid logo"
+							/>
+						</a>
+					</div>
+				</section>
+				<section class="footer__section footer__section--center">
+					<div class="footer__name">Andy Pataki</div>
+					<div class="footer__occupation">
+						React + Typescript<br />
+						/ Front-of-the-front-end<br />
+						/ Full Stack Developer
+					</div>
+				</section>
+				<section class="footer__section footer__section--right">
+					<div class="footer__contact">
+						<div class="footer__contact-line1">Questions, thoughts?</div>
+						<div class="footer__contact-line2">
+							Contact me at
+							<a
+								class="footer__email"
+								onclick="IAG.copyEmailToClipboard()"
+								title="Click here to copy my email to your clipboard!"
+								>andy<span class="nospam">XX</span>@<span class="nospam"
+									>XX</span
+								>iamgrid.co.uk</a
+							>, I'm looking forward to hearing from you! ;)
+						</div>
+					</div>
+				</section>
+			</div>
+		</footer>
 	</body>
 </html>

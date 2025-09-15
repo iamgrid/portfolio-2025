@@ -63,6 +63,19 @@ const IAG = {
 		sectionEl.scrollIntoView({ behavior: "smooth" });
 		window.history.pushState(null, "", `#${sectionId}`);
 	},
+	copyEmailToClipboard: function () {
+		const functionSignature = "index.js@copyEmailToClipboard()";
+		console.log(functionSignature);
+		const email = "andy@iamgrid.co.uk";
+		navigator.clipboard
+			.writeText(email)
+			.then(() => {
+				alert(`Email address (${email}) copied to clipboard.`);
+			})
+			.catch((err) => {
+				console.error("Failed to copy text to clipboard: ", err);
+			});
+	},
 };
 
 window.onload = () => {

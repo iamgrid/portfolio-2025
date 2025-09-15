@@ -6,6 +6,10 @@
 	--bezier: all 0.2s cubic-bezier(0.1, -2.2, 1, 2.2);
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
@@ -69,8 +73,7 @@ a {
 	}
 }
 
-header,
-footer {
+header {
 	padding: 2em 0;
 }
 
@@ -106,21 +109,16 @@ a:hover {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-section {
+.main section {
 	padding: 4em 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-section:last-child {
+.main section:last-child {
 	border-bottom: 0;
 }
 
-footer {
-	font-size: 0.8em;
-	color: rgba(255, 255, 255, 0.6);
-}
-
-section h1 {
+.main section h1 {
 	margin: 0;
 	font-size: 0.8em;
 	letter-spacing: 1.4em;
@@ -135,11 +133,11 @@ section h1 {
 }
 
 @media all and (min-width: 34em) {
-	section h1 {
+	.main section h1 {
 		margin-right: 0;
 	}
-	section h1::before,
-	section h1::after {
+	.main section h1::before,
+	.main section h1::after {
 		content: "";
 		padding: 0 2em;
 		width: 25px;
@@ -149,12 +147,12 @@ section h1 {
 		background-position: center center;
 		opacity: 0.3;
 	}
-	section h1 span {
+	.main section h1 span {
 		transform: translateX(0.7em);
 	}
 }
 
-section h2 {
+.main section h2 {
 	font-size: 0.8em;
 	font-weight: normal;
 	color: rgba(255, 255, 255, 0.6);
@@ -281,4 +279,70 @@ section h2 {
 
 .profiles_container a:hover {
 	background: rgba(255, 255, 255, 0.25);
+}
+
+footer {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 4em 0;
+	/* line-height: 1.9em; */
+}
+
+footer section {
+	padding-top: 2.5em;
+}
+
+footer section:first-child {
+	padding-top: 0;
+}
+
+footer .iamgrid_logo {
+	width: 7em;
+	/* display: block; */
+	/* opacity: 0.7; */
+}
+
+.footer__logo-wrapper a {
+	cursor: pointer;
+}
+
+.footer__name {
+	font-weight: bold;
+	color: white;
+	font-size: 1.2em;
+	padding-bottom: 0.25em;
+}
+
+.footer__contact-line1 {
+	padding-bottom: 0.25em;
+}
+
+/* .footer__occupation {
+	color: #ffffffc0;
+} */
+
+.footer__email {
+	font-weight: bold;
+	color: white;
+}
+
+@media all and (min-width: 1000px) {
+	.footer__proper {
+		width: 960px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	footer section {
+		padding: 1em 3em;
+		border-left: 1px solid #ffffff15;
+		/* border-left: 1px solid #00000070; */
+	}
+
+	footer section:first-child {
+		border-left: 0;
+		padding-top: 1em;
+	}
 }
