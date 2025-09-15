@@ -16,46 +16,56 @@
 			<img
 				src="./assets/iamgrid_logo_white.svg"
 				class="iamgrid_logo"
-				alt="i_am_grid logo"
+				alt="i.am.grid logo"
 			/>
 			<img
 				src="./assets/iamgrid_logo.svg"
 				class="iamgrid_logo_black"
-				alt="i_am_grid logo black variant if you need it"
+				alt="i.am.grid logo black variant if you need it"
 			/>
 		</header>
 		<div class="main">
 			<section class="about">
 				<h1><span>About</span></h1>
-				<p>Hello there, welcome!</p>
-				<p>
-					This here is the personal/business website of <b>Andy Pataki</b>, a
-					Freelance Full Stack Developer.
-				</p>
-				<p>
-					I specialize in "<a
-						href="https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/"
-						target="_blank"
-						>front-of-the-front-end</a
-					>" (e.g. UX focused, heavy-duty CSS+HTML) and React+TypeScript work,
-					but I have many years of full stack development experience to fall
-					back on if your project requires me to play all registers.
-				</p>
-				<p>
-					I live and work in Paks, Hungary in the GMT+1 (aka CET) timezone,
-					serving clients based in the Americas and Europe.
-				</p>
-				<p>
-					<span class="jump-to"
-						>Jump to:
-						<a onclick="IAG.scrollToSection('demo-projects')"
-							>2025 Demo Projects</a
-						>,
-						<a onclick="IAG.scrollToSection('professional-milestones')"
-							>Professional Milestones</a
-						>, <a onclick="IAG.scrollToSection('cv')">CV</a></span
-					>
-				</p>
+				<div class="about__photo-wrapper">
+					<img
+						src="./assets/andy-pataki--rounded-profile-pic.png"
+						alt="Photo of Andy Pataki"
+						title="Photo of Andy Pataki"
+						class="about__photo"
+					/>
+				</div>
+				<div class="about__text">
+					<p>Hello there, welcome!</p>
+					<p>
+						This here is the personal/business website of <b>Andy Pataki</b>, a
+						Freelance Full Stack Developer.
+					</p>
+					<p>
+						I specialize in "<a
+							href="https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/"
+							target="_blank"
+							>front-of-the-front-end</a
+						>" (e.g. UX focused, heavy-duty CSS+HTML) and React+TypeScript work,
+						but I have many years of full stack development experience to fall
+						back on if your project requires me to play all registers.
+					</p>
+					<p>
+						I live and work in Paks, Hungary in the GMT+1 (aka CET) timezone,
+						serving clients based in the Americas and Europe.
+					</p>
+					<p>
+						<span class="jump-to"
+							>Jump to:
+							<a onclick="IAG.scrollToSection('demo-projects')"
+								>2025 Demo Projects</a
+							>,
+							<a onclick="IAG.scrollToSection('professional-milestones')"
+								>Professional Milestones</a
+							>, <a onclick="IAG.scrollToSection('cv')">CV</a></span
+						>
+					</p>
+				</div>
 			</section>
 			<section class="profiles" id="profiles">
 				<h1><span>Socials, etc.</span></h1>
@@ -97,6 +107,78 @@
 			</section>
 			<section class="demo-projects" id="demo-projects">
 				<h1><span>2025 Demo Projects</span></h1>
+				<div class="demo-projects__wrapper">
+					<a
+						class="demo-project"
+						href="https://iamgrid.co.uk/sublight-patrol/"
+						target="_blank"
+					>
+						<div class="demo-project__left">
+							<img
+								src="./assets/sublight-patrol_2025-demo-projects-thumbnail.jpg"
+								alt="Sublight Patrol demo project thumbnail"
+								class="demo-project__thumbnail"
+							/>
+						</div>
+						<div class="demo-project__right">
+							<div class="demo-project__title">Sublight Patrol</div>
+							<div class="demo-project__description">
+								An open source and noncommercial side-scrolling space shooter
+								browser game for your PC or Mac
+							</div>
+							<div class="demo-project__technologies">
+								<span class="demo-project__technologies-title"
+									>Technologies:</span
+								><br />
+								<span class="demo-project__technologies-list"
+									>JavaScript, HTML, CSS, WebGL (using PixiJS)</span
+								>
+							</div>
+						</div>
+					</a>
+					<a class="demo-project demo-project--coming-soon">
+						<div class="demo-project__left">
+							<img
+								src="./assets/todo-2025-a_2025-demo-projects-thumbnail.jpg"
+								alt="Todo 2025 A demo project thumbnail"
+								class="demo-project__thumbnail"
+							/>
+						</div>
+						<div class="demo-project__right">
+							<div class="demo-project__title">Todo 2025 A</div>
+							<div class="demo-project__description">[ coming soon ]</div>
+							<div class="demo-project__technologies">
+								<span class="demo-project__technologies-title"
+									>Technologies:</span
+								><br />
+								<span class="demo-project__technologies-list"
+									>React, Typescript, Tailwind, Vite, Vitest</span
+								>
+							</div>
+						</div>
+					</a>
+					<a class="demo-project demo-project--coming-soon">
+						<div class="demo-project__left">
+							<img
+								src="./assets/todo-2025-b_2025-demo-projects-thumbnail.jpg"
+								alt="Todo 2025 B demo project thumbnail"
+								class="demo-project__thumbnail"
+							/>
+						</div>
+						<div class="demo-project__right">
+							<div class="demo-project__title">Todo 2025 B</div>
+							<div class="demo-project__description">[ coming soon ]</div>
+							<div class="demo-project__technologies">
+								<span class="demo-project__technologies-title"
+									>Technologies:</span
+								><br />
+								<span class="demo-project__technologies-list"
+									>React, Typescript, styled() Material UI, Vite, Jest</span
+								>
+							</div>
+						</div>
+					</a>
+				</div>
 			</section>
 			<section class="milestones" id="professional-milestones">
 				<h1><span>Professional Milestones</span></h1>
