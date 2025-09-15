@@ -76,12 +76,36 @@ const IAG = {
 				console.error("Failed to copy text to clipboard: ", err);
 			});
 	},
+	backToTopLinkIsVisible: false,
+	showHideBackToTopLink: function () {
+		const topLinkEl = document.getElementById("top-link");
+		if (window.scrollY > 100) {
+			if (!IAG.backToTopLinkIsVisible) {
+				topLinkEl.style.display = "block";
+				IAG.backToTopLinkIsVisible = true;
+				setTimeout(() => {
+					topLinkEl.style.opacity = "1";
+				}, 100);
+			}
+		} else {
+			if (IAG.backToTopLinkIsVisible) {
+				topLinkEl.style.opacity = "0";
+				setTimeout(() => {
+					topLinkEl.style.display = "none";
+					IAG.backToTopLinkIsVisible = false;
+				}, 400);
+			}
+		}
+	},
 };
 
 window.onload = () => {
 	setInterval(() => {
 		IAG.hueChanger.cycle();
 	}, 50);
+
+	// add scroll event listener to show/hide "back to top" link
+	window.addEventListener("scroll", IAG.showHideBackToTopLink);
 
 	window.IAG = IAG;
 };

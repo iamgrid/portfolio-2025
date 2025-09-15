@@ -46,6 +46,7 @@ body {
 		var(--main-bg-3, black)
 	);
 	background-attachment: fixed;
+	position: relative;
 }
 
 html,
@@ -345,4 +346,34 @@ footer .iamgrid_logo {
 		border-left: 0;
 		padding-top: 1em;
 	}
+}
+
+.top-link {
+	display: none;
+	opacity: 0;
+}
+
+.top-link {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #ffffff60;
+	color: white;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 20px;
+	opacity: 1;
+	transition: opacity 0.35s ease-in-out;
+	display: grid;
+	align-content: center;
+}
+
+.top-link span {
+	font-weight: bold;
+	display: block;
+	line-height: normal;
+	transform: translateY(-2px);
+	font-size: 18px;
 }
