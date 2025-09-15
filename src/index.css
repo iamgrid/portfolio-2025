@@ -308,6 +308,7 @@ a:hover {
 	color: white;
 	border-radius: var(--demo-project-border-radius);
 	margin-top: 1em;
+	box-shadow: 0 0 10px #00000030;
 }
 
 .demo-project--coming-soon {
@@ -445,7 +446,7 @@ footer .iamgrid_logo {
 
 	footer section {
 		padding: 1em 3em;
-		border-left: 1px solid #ffffff20;
+		border-left: 1px solid rgba(255, 255, 255, 0.12);
 		/* border-left: 1px solid #00000070; */
 	}
 
