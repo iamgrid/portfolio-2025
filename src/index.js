@@ -3,11 +3,46 @@ import * as css from "./index.css";
 ("use strict");
 const IAG = {
 	hueChanger: {
+		animate: true,
 		rootEl: document.documentElement,
+		toggleButtonEl: document.getElementById("toggle-bg-animation"),
 		currentHue: 0,
 		cycle: function () {
+			if (!this.animate) return;
 			this.currentHue = (this.currentHue + 0.5) % 360;
 			this.rootEl.style.setProperty("--main-hue", this.currentHue);
+		},
+		toggleAnimation: function () {
+			const newState = !this.animate;
+			this.animate = newState;
+
+			localStorage.setItem("bgAnimation", newState ? "on" : "off");
+			localStorage.setItem("bgAnimationStoppedAtHue", this.currentHue);
+
+			this.updateToggleButtonState();
+		},
+		updateToggleButtonState: function () {
+			this.toggleButtonEl.ariaChecked = this.animate;
+			this.toggleButtonEl.title = this.animate
+				? "Background Animation is on"
+				: "Background Animation is off";
+		},
+		init: function () {
+			if (localStorage.getItem("bgAnimation") === "off") {
+				this.animate = false;
+				this.updateToggleButtonState();
+			}
+
+			if (localStorage.getItem("bgAnimationStoppedAtHue")) {
+				this.currentHue = parseFloat(
+					localStorage.getItem("bgAnimationStoppedAtHue")
+				);
+				this.rootEl.style.setProperty("--main-hue", this.currentHue);
+			}
+
+			setInterval(() => {
+				IAG.hueChanger.cycle();
+			}, 50);
 		},
 	},
 	milestones: {
@@ -100,9 +135,7 @@ const IAG = {
 };
 
 window.onload = () => {
-	setInterval(() => {
-		IAG.hueChanger.cycle();
-	}, 50);
+	IAG.hueChanger.init();
 
 	// add scroll event listener to show/hide "back to top" link
 	window.addEventListener("scroll", IAG.showHideBackToTopLink);

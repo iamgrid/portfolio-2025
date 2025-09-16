@@ -24,22 +24,35 @@
 				alt="i.am.grid logo black variant if you need it"
 			/>
 		</header>
+		<div class="bg-animation-toggle">
+			<button
+				id="toggle-bg-animation"
+				class="bg-animation-toggle__button"
+				role="switch"
+				aria-checked="true"
+				title="Background Animation is on"
+				onclick="IAG.hueChanger.toggleAnimation()"
+			>
+				<div class="bg-animation-toggle__state"></div>
+				<div class="bg-animation-toggle__label">Background Animation</div>
+			</button>
+		</div>
 		<div class="main">
 			<section class="about">
 				<h1><span>About</span></h1>
-				<div class="about__photo-wrapper">
+				<div class="about__photo">
 					<img
 						src="./assets/andy-pataki--rounded-profile-pic.png"
 						alt="Photo of Andy Pataki"
 						title="Photo of Andy Pataki"
-						class="about__photo"
+						class="about__photo__proper"
 					/>
 				</div>
 				<div class="about__text">
 					<p>Hello there, welcome!</p>
 					<p>
 						This here is the personal/business website of <b>Andy Pataki</b>, a
-						Freelance Full Stack Developer.
+						freelance Full Stack Developer.
 					</p>
 					<p>
 						I specialize in "<a
@@ -107,7 +120,7 @@
 			</section>
 			<section class="demo-projects" id="demo-projects">
 				<h1><span>2025 Demo Projects</span></h1>
-				<div class="demo-projects__wrapper">
+				<div class="demo-projects__content">
 					<a
 						class="demo-project"
 						href="https://iamgrid.co.uk/sublight-patrol/"
@@ -152,7 +165,8 @@
 									>Technologies:</span
 								><br />
 								<span class="demo-project__technologies-list"
-									>React, Typescript, Tailwind, Vite, Vitest</span
+									>React, Typescript, styled() Material UI, Vite, Vitest,
+									Playwright</span
 								>
 							</div>
 						</div>
@@ -173,7 +187,7 @@
 									>Technologies:</span
 								><br />
 								<span class="demo-project__technologies-list"
-									>React, Typescript, styled() Material UI, Vite, Jest</span
+									>React, Typescript, Tailwind, Next.js SSG, Jest</span
 								>
 							</div>
 						</div>
@@ -203,7 +217,7 @@
 						Design
 					</button>
 				</div>
-				<div class="milestones__wrapper" id="milestones-wrapper">
+				<div class="milestones__content">
 					<div
 						id="milestones__DEV"
 						class="milestones__view milestones__view--active"
@@ -249,7 +263,10 @@
 							<div class="milestone__year">2005</div>
 							<div class="milestone__event">
 								Built my first full stack web app (<b>PHP+MySQL</b> back-end,
-								<b>HTML+CSS</b> front-end with minimal plain <b>JavaScript</b>).
+								<b>HTML+CSS</b> front-end with minimal plain <b>JavaScript</b>),
+								a custom internal calendar for a small company. Employees could
+								log in to see their work assignments for the days of the week,
+								update assignment particulars and attach comments when needed.
 							</div>
 						</div>
 						<div class="milestone">
@@ -271,7 +288,7 @@
 							<div class="milestone__event">
 								I had the privilege of mentoring a junior Developer and a junior
 								Designer and served as their technical lead for ~9 months before
-								leaving MVMI.
+								leaving MVMI in 2008.
 							</div>
 						</div>
 						<div class="milestone">
@@ -336,6 +353,15 @@
 								The first time I got paid to build something serious with
 								<b>SuiteScript 2.1</b> (the scripting language for the NetSuite
 								ERP platform).
+							</div>
+							<div class="milestone__event">
+								My main project involved building and expanding the "Connexa
+								Toolkit", a React application which contained tools for a wide
+								range of roles at the company: A dashboard with charts and
+								readouts for management. A customer management and a sales
+								pipeline tool for sales representatives. Order scheduling, item
+								search, payroll labor, labor utilization, negative inventory and
+								costed BOM tools for folks working in fulfillment.
 							</div>
 						</div>
 					</div>
@@ -404,7 +430,7 @@
 			</section>
 			<section class="cv" id="cv">
 				<h1><span>CV</span></h1>
-				<div class="cv__wrapper">
+				<div class="cv__content">
 					<i>[ New CV coming soon. ]</i>
 				</div>
 			</section>
