@@ -6,7 +6,7 @@ const IAG = {
 		animate: true,
 		rootEl: document.documentElement,
 		toggleButtonEl: document.getElementById("toggle-bg-animation"),
-		currentHue: 0,
+		currentHue: 175,
 		cycle: function () {
 			if (!this.animate) return;
 			this.currentHue = (this.currentHue + 0.5) % 360;
@@ -31,13 +31,13 @@ const IAG = {
 			if (localStorage.getItem("bgAnimation") === "off") {
 				this.animate = false;
 				this.updateToggleButtonState();
-			}
 
-			if (localStorage.getItem("bgAnimationStoppedAtHue")) {
-				this.currentHue = parseFloat(
-					localStorage.getItem("bgAnimationStoppedAtHue")
-				);
-				this.rootEl.style.setProperty("--main-hue", this.currentHue);
+				if (localStorage.getItem("bgAnimationStoppedAtHue")) {
+					this.currentHue = parseFloat(
+						localStorage.getItem("bgAnimationStoppedAtHue")
+					);
+					this.rootEl.style.setProperty("--main-hue", this.currentHue);
+				}
 			}
 
 			setInterval(() => {
