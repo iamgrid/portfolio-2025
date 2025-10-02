@@ -367,12 +367,15 @@ a:hover {
 }
 
 .demo-project__thumbnail {
-	width: 200px;
-	height: 200px;
+	width: 210px;
+	height: 210px;
+	display: block;
 }
 
 .demo-project__left {
 	background-color: black;
+	display: flex;
+	justify-content: center;
 }
 
 .demo-project__left, .demo-project__thumbnail {
@@ -386,14 +389,13 @@ a:hover {
 	padding: 1.3em 1.5em;
 }
 
-.demo-project__title {
-	font-size: 1.2em;
-	font-weight: bold;
+.demo-project__description, .demo-project__technologies {
+	font-size: 0.8em;
 }
 
-.demo-project__description, .demo-project__technologies {
-	padding-top: 0.75em;
-	font-size: 0.8em;
+.demo-project__technologies {
+	/* padding-top: 0.75em; */
+	padding-top: 1.2em;
 }
 
 .demo-project__technologies-title {
@@ -413,10 +415,10 @@ a:hover {
 		align-items: center;
 	}
 
-	.demo-project__thumbnail {
+	/* .demo-project__thumbnail {
 		width: 210px;
 		height: 210px;
-	}
+	} */
 	
 	.demo-project__left, .demo-project__thumbnail {
 		border-top-left-radius: var(--demo-project-border-radius);
