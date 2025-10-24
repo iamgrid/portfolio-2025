@@ -339,7 +339,7 @@ a:hover {
 
 .demo-project {
 	display: block;
-	border: 1px solid #ffffff60;
+	border: 1px solid #ffffff00;
 	background-color: #00000040;
 	transition: border-color 0.2s var(--bezier-min), background-color 0.4s ease-in-out;
 	text-decoration: none;
