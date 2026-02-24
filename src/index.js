@@ -6,7 +6,7 @@ const IAG = {
 		animate: true,
 		rootEl: document.documentElement,
 		toggleButtonEl: document.getElementById("toggle-bg-animation"),
-		currentHue: 175,
+		currentHue: 210,
 		cycle: function () {
 			if (!this.animate) return;
 			this.currentHue = (this.currentHue + 0.5) % 360;
@@ -34,7 +34,7 @@ const IAG = {
 
 				if (localStorage.getItem("bgAnimationStoppedAtHue")) {
 					this.currentHue = parseFloat(
-						localStorage.getItem("bgAnimationStoppedAtHue")
+						localStorage.getItem("bgAnimationStoppedAtHue"),
 					);
 					this.rootEl.style.setProperty("--main-hue", this.currentHue);
 				}
@@ -62,7 +62,7 @@ const IAG = {
 			if (viewId === this.selectedView) {
 				console.log(
 					functionSignature,
-					"No change in active view, returning early..."
+					"No change in active view, returning early...",
 				);
 				return;
 			}
@@ -74,7 +74,7 @@ const IAG = {
 				.getElementById(`milestones__${this.selectedView}`)
 				.classList.remove("milestones__view--active");
 			document.getElementById(
-				`milestones__${this.selectedView}-radio`
+				`milestones__${this.selectedView}-radio`,
 			).ariaChecked = false;
 
 			document

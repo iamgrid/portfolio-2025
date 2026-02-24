@@ -1,5 +1,5 @@
 :root {
-	--main-hue: 175;
+	--main-hue: 210;
 	--main-bg-1: hsla(var(--main-hue), 50%, 40%, 1);
 	--main-bg-2: hsla(var(--main-hue), 50%, 20%, 1);
 	--main-bg-3: hsla(var(--main-hue), 50%, 7%, 1);
