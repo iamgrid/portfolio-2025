@@ -3,10 +3,10 @@ import * as css from "./index.css";
 ("use strict");
 const IAG = {
 	hueChanger: {
-		animate: true,
+		animate: false,
 		rootEl: document.documentElement,
 		toggleButtonEl: document.getElementById("toggle-bg-animation"),
-		currentHue: 210,
+		currentHue: 207.5,
 		cycle: function () {
 			if (!this.animate) return;
 			this.currentHue = (this.currentHue + 0.5) % 360;
@@ -17,7 +17,6 @@ const IAG = {
 			this.animate = newState;
 
 			localStorage.setItem("bgAnimation", newState ? "on" : "off");
-			localStorage.setItem("bgAnimationStoppedAtHue", this.currentHue);
 
 			this.updateToggleButtonState();
 		},
@@ -28,16 +27,9 @@ const IAG = {
 				: "Background Animation is off";
 		},
 		init: function () {
-			if (localStorage.getItem("bgAnimation") === "off") {
-				this.animate = false;
+			if (localStorage.getItem("bgAnimation") === "on") {
+				this.animate = true;
 				this.updateToggleButtonState();
-
-				if (localStorage.getItem("bgAnimationStoppedAtHue")) {
-					this.currentHue = parseFloat(
-						localStorage.getItem("bgAnimationStoppedAtHue"),
-					);
-					this.rootEl.style.setProperty("--main-hue", this.currentHue);
-				}
 			}
 
 			setInterval(() => {
