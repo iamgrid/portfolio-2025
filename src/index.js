@@ -124,13 +124,41 @@ const IAG = {
 			}
 		}
 	},
+	atpState: "hidden",
+	isATPTransitioning: false,
+	toggleATP() {
+		if (IAG.isATPTransitioning) {
+			return;
+		}
+		const atpDiv = document.getElementById("atp");
+		const atpMain = document.getElementById("atp__main");
+		if (IAG.atpState === "visible") {
+			IAG.isATPTransitioning = true;
+			atpMain.style.opacity = "0";
+			setTimeout(() => {
+				atpDiv.classList.remove("atp--active");
+				IAG.isATPTransitioning = false;
+				IAG.atpState = "hidden";
+			}, 300);
+		} else {
+			IAG.isATPTransitioning = true;
+			atpDiv.classList.add("atp--active");
+			setTimeout(() => {
+				atpMain.style.opacity = "1";
+				IAG.isATPTransitioning = false;
+				IAG.atpState = "visible";
+			}, 50);
+		}
+	},
 };
 
 window.onload = () => {
+	window.IAG = IAG;
+
 	IAG.hueChanger.init();
 
 	// add scroll event listener to show/hide "back to top" link
 	window.addEventListener("scroll", IAG.showHideBackToTopLink);
 
-	window.IAG = IAG;
+	document.getElementById("atp__header").onclick = IAG.toggleATP;
 };
