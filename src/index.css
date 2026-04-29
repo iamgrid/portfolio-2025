@@ -196,8 +196,9 @@ a:hover {
 }
 
 h2 {
-	font-size: 1em;
-	font-weight: 700;
+	font-size: 1.1em;
+	font-weight: bold;
+	/* font-weight: normal; */
 	margin: 2.2em 0 1em;
 }
 
