@@ -152,6 +152,9 @@
 							<a onclick="IAG.scrollToSection('demo-projects')"
 								>2025 Demo Projects</a
 							>,
+							<a onclick="IAG.scrollToSection('core-values')"
+								>My Core Values as a Developer</a
+							>,
 							<a onclick="IAG.scrollToSection('professional-milestones')"
 								>Professional Milestones</a
 							>, <a onclick="IAG.scrollToSection('cv')">CV</a></span
@@ -161,7 +164,7 @@
 			</section>
 			<section class="profiles" id="profiles">
 				<h1><span>Socials, etc.</span></h1>
-				<div class="profiles_container">
+				<div class="profiles__container">
 					<a href="https://www.instagram.com/i.am.grid/" target="_blank"
 						>Instagram: i.am.grid</a
 					>
@@ -185,7 +188,7 @@
 					<a href="https://www.strava.com/athletes/155035778" target="_blank"
 						>Strava</a
 					>
-					<h2>Sites I'm mostly inactive on:</h2>
+					<span class="profiles__inactive">Sites I'm mostly inactive on:</span>
 					<a href="https://www.linkedin.com/in/andraspataki/" target="_blank"
 						>LinkedIn: andraspataki</a
 					>
@@ -271,6 +274,126 @@
 							</div>
 						</div>
 					</a>
+				</div>
+			</section>
+			<section class="core-values" id="core-values">
+				<h1>
+					<span>My Core Values<br />as a Developer</span>
+				</h1>
+				<div class="core-values__content">
+					<h2>
+						I. Centering Effective and Fun Stakeholder Interactions in the
+						Planning Stage Using Mockup-Based Iteration
+					</h2>
+					<p>
+						I rely heavily on
+						<i
+							><b
+								>an evolving deck of
+								<a
+									href="https://duckduckgo.com/?ia=images&t=h_&q=balsamiq+mockups&chip-select=search&iax=images"
+									target="_blank"
+									>mockups drawn in Balsamiq</a
+								></b
+							></i
+						>
+						when ideating on new features with stakeholders. I can produce these
+						drawings very quickly, so I'm not at all miffed about altering or
+						completely redoing them as many times as needed.
+					</p>
+					<p>
+						<i>Coding work only begins <b>after</b></i> the final version of the
+						mockup deck for a feature received full stakeholder approval.
+					</p>
+					<h2>II. Centering Maintainability and Avoiding Technical Debt</h2>
+					<p>
+						I believe strongly that the gold standard for
+						<i><b>production-level, maintainable code</b></i> is both
+					</p>
+					<ol>
+						<li>
+							<i
+								><b>code that is easily readable by humans</b> so bugfixes and
+								changes can be easily done months or years down the line by me
+								or another dev</i
+							>, and
+						</li>
+						<li>
+							<i
+								><b>code that is only as complicated as it needs to be</b> while
+								satisfying stakeholder requirements in terms of features and
+								future extensibility.</i
+							>
+						</li>
+					</ol>
+					<p>To achieve this gold standard:</p>
+					<ol>
+						<li>
+							I go out of my way to
+							<i>avoid committing show-offy, "code ninja" code</i> that is hard
+							to understand and reason about.
+						</li>
+						<li>
+							I think very carefully about the architecture of what I'm
+							creating, only introducing an
+							<i>abstraction when it is <b>fit for purpose</b></i
+							>.
+						</li>
+						<li>
+							I go out of my way to
+							<i
+								>leave <b>detailed and clear explanations</b> (comments,
+								documentation and even full walkthrough videos) in place</i
+							>
+							when I'm doing something complicated or unusual in the codebase.
+						</li>
+						<li>
+							I prioritize writing
+							<i>automated tests that mirror real-world usage</i>
+							to ensure reliability and maintainability.
+						</li>
+						<li>
+							I have my AI tools under strict supervision at all times:
+							<i>I read <b>every single line</b> of code I commit</i> and
+							<i><b>never</b> let a tool make architecture-level decisions</i>
+							in my stead.
+						</li>
+					</ol>
+					<h2>III. Centering the End User</h2>
+					<p>
+						<i
+							>The details I sweat the most are the ones that affect the
+							<b>end user's experience (UX)</b> in a direct way.</i
+						>
+					</p>
+					<p>
+						Having a UI that is clearly laid out and intuitive, with button
+						labels that are as obvious as humanly possible, and forms that a
+						user can navigate with just their keyboard, down to small-time
+						stuff, like how dates and times are displayed isn't just good UX.
+						Having all these things <i><b>just right</b></i> makes people's day
+						a tiny bit better. And striving to make people's day better is a
+						deeply meaningful and worthy way to spend one's work life.
+					</p>
+					<h2>IV. Centering my (and your) Health and Sanity</h2>
+					<p>
+						Everything I described above takes time and a huge amount of mental
+						effort on my part. I build things cost effectively and to a very
+						high standard, but <i><b>I'm not fast</b></i
+						>. My days of "crunch time" and all-nighters are behind me, and I'm
+						not intimidated by your title.
+					</p>
+					<p>
+						<i
+							><b
+								>If you care about UX and maintainable software I'll probably be
+								one of your favorite teammates.</b
+							></i
+						>
+						If you prioritize speed of delivery instead, I won't be the right
+						fit for your company, I will fight you and we'll probably part ways
+						very quickly.
+					</p>
 				</div>
 			</section>
 			<section class="milestones" id="professional-milestones">
@@ -379,15 +502,18 @@
 								>
 							</div>
 							<div class="milestone__event">
-								I built WebGyár, a multi-site content management system for
-								small- and medium-sized businesses. By the time of my departure
-								in 2016 GovernSoft's WebGyár system powered around 10 different
-								websites with widely varying layouts, sitemaps and many unique
-								features.<br />The CMS provided our clients with the ability to
-								manage news posts, product pages and galleries, had full
-								multi-language capabilities, and a convenient <b>AJAX</b>-based
-								file/folder manager with multi-upload and cut and paste
-								functionality.
+								I built WebGyár, a multi-site content management system (CMS)
+								for small- and medium-sized businesses. By the time of my
+								departure in 2016 GovernSoft's WebGyár system powered around 10
+								different websites with widely varying layouts, sitemaps and
+								many unique features.
+							</div>
+							<div class="milestone__event">
+								The CMS gave our clients the ability to manage news posts,
+								product pages and galleries on their own, had full
+								multi-language capabilities, and a convenient
+								<b>AJAX</b>-based file/folder manager with multi-upload and cut
+								and paste functionality.
 							</div>
 						</div>
 						<div class="milestone">

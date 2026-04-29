@@ -195,14 +195,14 @@ a:hover {
 	}
 }
 
-.main section h2 {
-	font-size: 0.8em;
-	font-weight: normal;
-	color: rgba(255, 255, 255, 0.6);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.6em 0 0 0;
+h2 {
+	font-size: 1em;
+	font-weight: 700;
+	margin: 2.2em 0 1em;
+}
+
+section h2:first-child {
+	margin: 1em 0;
 }
 
 .about__photo__proper {
@@ -212,6 +212,24 @@ a:hover {
 
 .about__photo {
 	padding-top: 1em;
+}
+
+.profiles__inactive {
+	font-size: 0.8em;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6em 0 0 0;
+}
+
+.core-values__content {
+	text-align: justify;
+}
+
+.core-values__content h2 {
+	text-align: center;
 }
 
 .portfolio-radioset {
@@ -292,6 +310,10 @@ a:hover {
 	padding: 0.6em 0;
 }
 
+.milestones__content {
+	text-align: justify;
+}
+
 .milestone {
 	padding: 9px 0;
 }
@@ -299,6 +321,7 @@ a:hover {
 .milestone__year {
 	font-size: 1.2em;
 	font-weight: bold;
+	text-align: center;
 }
 
 .milestone__event {
@@ -313,12 +336,12 @@ a:hover {
 	display: none;
 }
 
-.profiles_container {
+.profiles__container {
 	text-align: center;
 	margin: 1em 0;
 }
 
-.profiles_container a {
+.profiles__container a {
 	display: inline-block;
 	background: rgba(255, 255, 255, 0.12);
 	border-radius: 0.3em;
@@ -329,7 +352,7 @@ a:hover {
 	transition: var(--bezier);
 }
 
-.profiles_container a:hover {
+.profiles__container a:hover {
 	background: rgba(255, 255, 255, 0.25);
 }
 
