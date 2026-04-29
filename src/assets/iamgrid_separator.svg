@@ -1,0 +1,10 @@
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="15px" viewBox="-10 0 45 15" xml:space="preserve">
+	<g>
+		<circle fill="#FFFFFF" cx="2.5" cy="7.5" r="1.6"/>
+		<circle fill="#FFFFFF" cx="12.5" cy="7.5" r="1.6"/>
+		<circle fill="#FFFFFF" cx="22.5" cy="7.5" r="1.6"/>
+		<circle fill="#FFFFFF" cx="-7.5" cy="7.5" r="1.6"/>
+		<circle fill="#FFFFFF" cx="32.5" cy="7.5" r="1.6"/>
+	</g>
+</svg>
