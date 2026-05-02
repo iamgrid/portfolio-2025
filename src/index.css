@@ -198,16 +198,36 @@ a:hover {
 h2 {
 	font-size: 1.1em;
 	font-weight: bold;
-	margin: 1em 0;
+	margin: 2em 0 1em;
+	text-align: center;
+}
+
+section h2:first-child {
+	margin-top: 1.2em;
+}
+
+h2::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-image: url("assets/iamgrid_h2_top.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.3;
+	margin-bottom: 1em;
 }
 
 h2::after {
 	content: "";
 	display: block;
-	width: max(120px, 30%);
-	height: 1em;
-	border-bottom: 1px solid #ffffff40;
-	margin: 0 auto;
+	width: 100%;
+	height: 4px;
+	background-image: url("assets/iamgrid_h2_bottom.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.3;
+	margin-top: 1em;
 }
 
 hr {
@@ -219,10 +239,6 @@ hr {
 	background-position: center center;
 	opacity: 0.3;
 	margin: 1.2em 0;
-}
-
-section h2:first-child {
-	margin: 1em 0;
 }
 
 .about__photo__proper {
@@ -246,10 +262,6 @@ section h2:first-child {
 
 .core-values__content {
 	text-align: justify;
-}
-
-.core-values__content h2 {
-	text-align: center;
 }
 
 .portfolio-radioset {
@@ -340,7 +352,7 @@ section h2:first-child {
 
 .milestone__year {
 	font-size: 1.2em;
-	font-weight: bold;
+	/* font-weight: bold; */
 	text-align: center;
 }
 
