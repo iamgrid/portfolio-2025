@@ -338,6 +338,10 @@ table thead tr th {
 	text-align: center;
 }
 
+table tbody {
+	line-height: 1.5em;
+}
+
 table tbody tr:last-child td {
 	border-bottom: 1px dashed #ffffff60;
 	padding-bottom: 0.5rem;
@@ -348,12 +352,12 @@ table tr th, table tr td {
 }
 
 table tr td {
-	padding-top: 0.3rem;
-}
-
-table tr:first-child td {
 	padding-top: 0.5rem;
 }
+
+/* table tr:first-child td {
+	padding-top: 0.5rem;
+} */
 
 table tr th:first-child, table tr td:first-child {
 	padding-left: 1rem;
@@ -361,6 +365,23 @@ table tr th:first-child, table tr td:first-child {
 
 table tr th:last-child, table tr td:last-child {
 	padding-right: 1rem;
+}
+
+.table-wrapper {
+	margin: 2em 0;
+	display: flex;
+	justify-content: center;
+}
+
+.table-wrapper table {
+	margin: 0;
+}
+
+.table-notes {
+	font-size: 0.7em;
+	opacity: 0.6;
+	padding-left: 1rem;
+	padding-top: 2px;
 }
 
 .milestones .portfolio-radioset {
@@ -381,6 +402,22 @@ table tr th:last-child, table tr td:last-child {
 
 .milestones table tr td:first-child {
 	font-weight: bold;
+}
+
+.milestones__tool-wrapper img {
+	display: block;
+}
+
+.milestones__tool-wrapper {
+	display: grid;
+	grid-template-columns: 20px 20px auto;
+	gap: 5px;
+	align-items: center;
+	justify-content: left;
+}
+
+.milestones__tool-wrapper div:nth-child(3) {
+	padding-left: 5px;
 }
 
 .milestone {
@@ -549,6 +586,16 @@ footer .iamgrid_logo {
 	cursor: pointer;
 }
 
+.footer__dots {
+	display: none;
+	width: 14px;
+	height: 14px;
+	background: url("assets/iamgrid_footer_dots.svg");
+	opacity: 0.3;
+	margin-top: 39px;
+	margin-left: 2px;
+}
+
 .footer__name {
 	font-weight: bold;
 	color: white;
@@ -587,6 +634,10 @@ footer .iamgrid_logo {
 	footer section:first-child {
 		border-left: 0;
 		padding-top: 1em;
+	}
+
+	.footer__dots {
+		display: block;
 	}
 }
 
