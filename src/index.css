@@ -241,6 +241,12 @@ hr {
 	margin: 1.2em 0;
 }
 
+.illustration-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 1.5em 0;
+}
+
 .about__photo__proper {
 	width: 120px;
 	height: 120px;
