@@ -319,13 +319,15 @@ hr {
 }
 
 .jump-to {
-	/* margin-top: 1.2em; */
 	font-size: 0.8em;
+	line-height: 1.6em;
 	color: rgba(255, 255, 255, 0.6);
+	/* padding: 0 1em; */
+	text-align: left;
 }
 
 .jump-to hr {
-	margin-bottom: 1.6em;
+	margin-bottom: 1.8em;
 }
 
 .jump-to a {
@@ -476,6 +478,15 @@ table tr th:last-child, table tr td:last-child {
 
 .demo-projects__content {
 	padding-top: 1em;
+}
+
+.demo-projects__ai-disclosure {
+	text-align: justify;
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.6);
+	line-height: 1.6em;
+	padding: 2em 1em 0;
+
 }
 
 .demo-project {
