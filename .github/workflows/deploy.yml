@@ -35,10 +35,12 @@ jobs:
       - name: Deploy site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: iamgrid.co.uk
+          server: ftp.iamgrid.co.uk
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          port: 21
+          security: loose
           local-dir: ./dist/
           server-dir: /public_html/
           exclude: |
