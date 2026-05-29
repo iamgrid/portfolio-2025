@@ -1,12 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-	entry: "./src/index.js",
+	entry: "./src/portfolio_assets/index.js",
 	output: {
-		filename: "iamgrid.bundle.[contenthash].js",
+		filename: "portfolio_assets/iamgrid.bundle.[contenthash].js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true, // Clean the output directory before emit
 		hashDigestLength: 8,
@@ -15,8 +15,8 @@ module.exports = {
 		port: 8080,
 		open: true,
 		static: {
-			directory: path.join(__dirname, "./assets"),
-			publicPath: "/assets",
+			directory: path.join(__dirname, "./src/portfolio_assets"),
+			publicPath: "/portfolio_assets",
 		},
 		hot: false, // Disable hot module replacement
 	},
@@ -41,14 +41,19 @@ module.exports = {
 			template: "./src/index.html",
 			filename: "index.html",
 		}),
-		new CopyPlugin({
+		new CopyWebpackPlugin({
 			patterns: [
-				{ from: "./src/assets", to: "assets" },
-				{ from: "./src/favicon.ico", to: "favicon.ico" },
+				{
+					from: "./src/portfolio_assets",
+					to: "portfolio_assets",
+					globOptions: {
+						ignore: ["**/*.js", "**/*.css"],
+					},
+				},
 			],
 		}),
 		new MiniCssExtractPlugin({
-			filename: "iamgrid.bundle.[contenthash].css",
+			filename: "portfolio_assets/iamgrid.bundle.[contenthash].css",
 		}),
 	],
 };
