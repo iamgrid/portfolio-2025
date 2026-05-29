@@ -41,7 +41,7 @@ jobs:
           protocol: ftp
           port: 21
           # security: strict
-          log-level: verbose
+          # log-level: verbose
           local-dir: ./dist/
           server-dir: /public_html/
           exclude: |
