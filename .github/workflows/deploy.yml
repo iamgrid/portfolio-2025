@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy index.html via FTP
+      - name: Deploy site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: iamgrid.co.uk
