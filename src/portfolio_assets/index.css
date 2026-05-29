@@ -185,7 +185,7 @@ a:hover {
 		padding: 0 2em;
 		width: 25px;
 		height: 15px;
-		background-image: url("assets/iamgrid_h1_dots.svg");
+		background-image: url("img/iamgrid_h1_dots.svg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		opacity: 0.3;
@@ -211,7 +211,7 @@ h2::after {
 	display: block;
 	width: 100%;
 	height: 4px;
-	background-image: url("assets/iamgrid_h2_bottom.svg");
+	background-image: url("img/iamgrid_h2_bottom.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	opacity: 0.3;
@@ -222,7 +222,7 @@ hr {
 	border: 0;
 	width: 100%;
 	height: 15px;
-	background-image: url("assets/iamgrid_separator.svg");
+	background-image: url("img/iamgrid_separator.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	opacity: 0.3;
@@ -230,7 +230,7 @@ hr {
 }
 
 .hr--type-2 {
-	background-image: url("assets/iamgrid_h2_bottom.svg");
+	background-image: url("img/iamgrid_h2_bottom.svg");
 	margin: 2em 0;
 }
 
@@ -613,7 +613,7 @@ footer .iamgrid_logo {
 	display: none;
 	width: 14px;
 	height: 14px;
-	background: url("assets/iamgrid_footer_dots.svg");
+	background: url("img/iamgrid_footer_dots.svg");
 	opacity: 0.3;
 	margin-top: 39px;
 	margin-left: 2px;
