@@ -164,6 +164,7 @@ a:hover {
 .main section h1 {
 	margin: 0;
 	font-size: 0.8em;
+	font-family: "Space Mono", monospace;
 	letter-spacing: 1.4em;
 	margin-right: -1.4em;
 	text-transform: uppercase;
@@ -191,7 +192,7 @@ a:hover {
 		opacity: 0.3;
 	}
 	.main section h1 span {
-		transform: translateX(0.7em);
+		transform: translateX(0.7em) translateY(1px);
 	}
 }
 
@@ -203,7 +204,7 @@ h2 {
 	line-height: 31px;
 	font-weight: 400;
 	font-style: normal;
-	letter-spacing: normal;
+	letter-spacing: 0;
 	margin: 4.5em 0 1em;
 	text-align: center;
 }
@@ -441,13 +442,25 @@ table tr th:last-child, table tr td:last-child {
 }
 
 .milestone {
-	padding: 9px 0;
+	padding: 12px 0;
+}
+
+.milestones__list .milestone:first-child {
+	padding-top: 6px;
+}
+
+.milestones__list .milestone:last-child {
+	padding-bottom: 0;
 }
 
 .milestone__year {
-	font-size: 1.2em;
+	font-size: 1em;
 	/* font-weight: bold; */
+	font-family: "Space Mono", monospace;
 	text-align: center;
+	/* letter-spacing: 0.8px; */
+	letter-spacing: 6px;
+	transform: translateX(3.5px);
 }
 
 .milestone__event {
@@ -626,9 +639,13 @@ footer .iamgrid_logo {
 }
 
 .footer__name {
-	font-weight: bold;
+	/* font-weight: bold; */
+	font-weight: 700;
+	font-family: Space Mono, monospace;
 	color: white;
-	font-size: 1.2em;
+	/* font-size: 1.2em; */
+	font-size: 14px;
+	letter-spacing: 1px;
 	padding-bottom: 0.25em;
 }
 
