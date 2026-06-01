@@ -1,7 +1,7 @@
 :root {
 	--main-hue: 207.5;
-	--main-bg-1: hsla(var(--main-hue), 50%, 40%, 1);
-	--main-bg-2: hsla(var(--main-hue), 50%, 20%, 1);
+	--main-bg-1: hsla(var(--main-hue), 45%, 40%, 1);
+	--main-bg-2: hsla(var(--main-hue), 45%, 20%, 1);
 	--main-bg-3: hsla(var(--main-hue), 50%, 7%, 1);
 	--bezier: all 0.2s cubic-bezier(0.1, -2.2, 1, 2.2);
 	--bezier-min: cubic-bezier(0.1, -2.2, 1, 2.2);
@@ -206,6 +206,7 @@ h2 {
 	font-style: normal;
 	letter-spacing: 0;
 	margin: 4.5em 0 1em;
+	padding: 0 1em;
 	text-align: center;
 }
 
@@ -217,12 +218,12 @@ h2::after {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 4px;
+	height: 26px;
 	background-image: url("img/iamgrid_h2_bottom.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	opacity: 0.3;
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 
 hr {
@@ -237,7 +238,7 @@ hr {
 }
 
 .hr--type-2 {
-	background-image: url("img/iamgrid_h2_bottom.svg");
+	background-image: url("img/iamgrid_separator_2.svg");
 	margin: 2em 0;
 }
 
@@ -251,8 +252,12 @@ hr {
 	text-align: justify;
 }
 
+.about__dot {
+	opacity: 0.3;
+}
+
 .about__hello {
-	padding: 1.7em 0 1.3em;
+	padding: 6px 0 1.3em;
 }
 
 .about__photo__proper {
