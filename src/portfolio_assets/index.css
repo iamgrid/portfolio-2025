@@ -196,8 +196,14 @@ a:hover {
 }
 
 h2 {
-	font-size: 1.1em;
-	font-weight: bold;
+	/* font-size: 1.1em;
+	font-weight: bold; */
+	font-family: "Space Mono", monospace;
+	font-size: 18px;
+	line-height: 31px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
 	margin: 4.5em 0 1em;
 	text-align: center;
 }
