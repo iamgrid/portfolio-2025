@@ -40,6 +40,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
+          timeout: 60000
           # security: strict
           # log-level: verbose
           local-dir: ./dist/
