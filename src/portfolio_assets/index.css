@@ -276,6 +276,10 @@ hr {
 	text-align: justify;
 }
 
+.core-values__content hr {
+	margin: 0.75em 0;
+}
+
 .portfolio-radioset {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
@@ -419,6 +423,11 @@ table tr th:last-child, table tr td:last-child {
 	text-align: justify;
 }
 
+.milestones__content hr {
+	margin-top: 0.5em;
+	margin-bottom: calc(0.5em - 6px);
+}
+
 .milestones table tr td:first-child {
 	font-weight: bold;
 }
@@ -440,7 +449,7 @@ table tr th:last-child, table tr td:last-child {
 }
 
 .milestone {
-	padding: 12px 0;
+	padding: 16px 0;
 }
 
 .milestones__list .milestone:first-child {
