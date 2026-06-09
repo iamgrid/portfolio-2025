@@ -63,6 +63,6 @@ jobs:
               google*.html
               robots.txt
               WARNING*.txt
-        attempt_limit: 3
-        # attempt_delay is set in milliseconds
-        attempt_delay: 2000
+          attempt_limit: 3
+          # attempt_delay is set in milliseconds
+          attempt_delay: 2000
