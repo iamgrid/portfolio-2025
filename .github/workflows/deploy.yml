@@ -32,9 +32,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy site via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      - name: Attempt to Deploy via FTP 3 times (set via attempt_limit)
+        uses: Wandalen/wretry.action@master
         with:
+          action: SamKirkland/FTP-Deploy-Action@v4.4.0
+          with: |
           server: ftp.iamgrid.co.uk
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
@@ -61,3 +63,6 @@ jobs:
             google*.html
             robots.txt
             WARNING*.txt
+        attempt_limit: 3
+        # attempt_delay is set in milliseconds
+        attempt_delay: 2000
