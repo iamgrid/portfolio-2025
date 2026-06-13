@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Attempt to Deploy via FTP 3 times (set via attempt_limit)
+      - name: Attempt to Deploy via FTP attempt_limit times
         uses: Wandalen/wretry.action@master
         with:
           action: SamKirkland/FTP-Deploy-Action@v4.4.0
