@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Attempt to Deploy via FTP attempt_limit times
+      - name: Attempt to Deploy via FTP %attempt_limit% times
         uses: Wandalen/wretry.action@master
         with:
           action: SamKirkland/FTP-Deploy-Action@v4.4.0
@@ -64,5 +64,4 @@ jobs:
               robots.txt
               WARNING*.txt
           attempt_limit: 2
-          # attempt_delay is set in milliseconds
-          attempt_delay: 20000
+          attempt_delay: 20000 # set in milliseconds
