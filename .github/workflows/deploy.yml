@@ -32,36 +32,32 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Attempt to Deploy via FTP %attempt_limit% times
-        uses: Wandalen/wretry.action@master
+      - name: Attempt to Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          action: SamKirkland/FTP-Deploy-Action@v4.4.0
-          with: |
-            server: ftp.iamgrid.co.uk
-            username: ${{ secrets.FTP_USERNAME }}
-            password: ${{ secrets.FTP_PASSWORD }}
-            protocol: ftp
-            port: 21
-            timeout: 30000
-            # security: strict
-            log-level: verbose
-            local-dir: ./dist/
-            server-dir: /public_html/
-            exclude: |
-              **/.well-known/**
-              **/cgi-bin/**
-              **/common/**
-              **/demos/**
-              **/grid_start/**
-              **/kdesk-proxy/**
-              **/openweathermap-forecast-viewer/**
-              **/react-19.2-playground/**
-              **/sublight-patrol/**
-              **/todo-2025-a/**
-              **/todo-2025-b/**
-              **/zoomanager/**
-              google*.html
-              robots.txt
-              WARNING*.txt
-          attempt_limit: 2
-          attempt_delay: 20000 # set in milliseconds
+          server: 188.34.143.174
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 30000
+          # security: strict
+          log-level: verbose
+          local-dir: ./dist/
+          server-dir: /public_html/
+          exclude: |
+            **/.well-known/**
+            **/cgi-bin/**
+            **/common/**
+            **/demos/**
+            **/grid_start/**
+            **/kdesk-proxy/**
+            **/openweathermap-forecast-viewer/**
+            **/react-19.2-playground/**
+            **/sublight-patrol/**
+            **/todo-2025-a/**
+            **/todo-2025-b/**
+            **/zoomanager/**
+            google*.html
+            robots.txt
+            WARNING*.txt
