@@ -287,11 +287,14 @@ hr {
 	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  hr, h2::after {
-    animation: slideInSlideOutAnimation;
-    animation-timeline: view();
-  }
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		hr, h2::after {
+			animation: slideInSlideOutAnimation;
+			animation-fill-mode: both;
+			animation-timeline: view();
+		}
+	}
 }
 
 .illustration-wrapper {
