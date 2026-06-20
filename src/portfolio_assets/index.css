@@ -5,6 +5,8 @@
 	--main-bg-3: hsla(var(--main-hue), 50%, 7%, 1);
 	--bezier: all 0.2s cubic-bezier(0.1, -2.2, 1, 2.2);
 	--bezier-min: cubic-bezier(0.1, -2.2, 1, 2.2);
+	--bounce-bezier: cubic-bezier(0, 0, .15, 1);
+	--breathe-bezier: cubic-bezier(.15,.37,.62,.85);
 	--demo-project-border-radius: 1em;
 }
 
@@ -176,10 +178,20 @@ a:hover {
 	padding: 0 0 0.6em 0;
 }
 
+@keyframes breatheAnimation {
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 0.5;
+	}
+}
+
 @media all and (min-width: 41em) {
 	.main section h1 {
 		margin-right: 0;
 	}
+
 	.main section h1::before,
 	.main section h1::after {
 		content: "";
@@ -191,6 +203,17 @@ a:hover {
 		background-position: center center;
 		opacity: 0.3;
 	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.main section h1::before, .main section h1::after {
+			animation-name: breatheAnimation;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: var(--breathe-bezier);
+		}
+	}
+
 	.main section h1 span {
 		transform: translateX(0.7em) translateY(1px);
 	}
@@ -245,6 +268,32 @@ hr {
 	margin: 0.8em 0;
 }
 
+@keyframes slideInSlideOutAnimation {
+	0% {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	25%, 75% {
+		transform: translateX(0);
+		opacity: 0.25;
+	}
+	50% {
+		transform: translateX(0);
+		opacity: 0.3;
+	}
+	100% {
+		transform: translateX(50px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  hr, h2::after {
+    animation: slideInSlideOutAnimation;
+    animation-timeline: view();
+  }
+}
+
 .illustration-wrapper {
 	display: flex;
 	justify-content: center;
@@ -255,8 +304,28 @@ hr {
 	text-align: justify;
 }
 
-.about__dot {
+@keyframes bounceAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+
+.single__dot {
 	opacity: 0.3;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.single__dot {
+		animation-name: bounceAnimation;
+		animation-iteration-count: infinite;
+		animation-duration: 0.3s;
+		/* animation-timing-function: ease-out; */
+		animation-timing-function: var(--bounce-bezier);
+		animation-direction: alternate-reverse;
+	}
 }
 
 .about__hello {
@@ -710,6 +779,16 @@ footer .iamgrid_logo {
 	.footer__dots {
 		display: block;
 	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.footer__dots {
+			animation-name: breatheAnimation;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: var(--breathe-bezier);
+		}
+	}
 }
 
 .top-link {
@@ -779,20 +858,6 @@ footer .iamgrid_logo {
 	padding-bottom: 0;
 }
 
-.atp__cog .svg-cog {
-	transform-origin: center;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-name: spinAnimation;
-	animation-play-state: paused;
-	transition: fill 0.25s ease-in-out;
-}
-
-.atp__cog .svg-cog, .atp__cog .svg-qm {
-	fill: var(--atp-cog-inactive);
-}
-
 @keyframes spinAnimation { 
 	from {
 		transform: rotate(0);
@@ -800,6 +865,23 @@ footer .iamgrid_logo {
 	to { 
 		transform: rotate(360deg);
 	} 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.atp__cog .svg-cog {
+		transform-origin: center;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-name: spinAnimation;
+		animation-play-state: paused;
+		transition: fill 0.25s ease-in-out;
+	}
+}
+
+
+.atp__cog .svg-cog, .atp__cog .svg-qm {
+	fill: var(--atp-cog-inactive);
 }
 
 .atp--active .svg-cog {
