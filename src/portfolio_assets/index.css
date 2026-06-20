@@ -157,6 +157,7 @@ a:hover {
 .main section {
 	padding: 4em 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	overflow-x: hidden; /* prevent hr and h2::after slide animations from triggering a scroll bar */
 }
 
 .main section:last-child {
