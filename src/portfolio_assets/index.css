@@ -8,6 +8,7 @@
 	--bounce-bezier: cubic-bezier(0, 0, .15, 1);
 	--breathe-bezier: cubic-bezier(.15,.37,.62,.85);
 	--demo-project-border-radius: 1em;
+	--slide-in-animation-horizontal-margins: 50px;
 }
 
 * {
@@ -157,7 +158,7 @@ a:hover {
 .main section {
 	padding: 4em 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-	overflow-x: hidden; /* prevent hr and h2::after slide animations from triggering a scroll bar */
+	/*overflow-x: hidden;*/ /* prevent hr and h2::after slide animations from triggering a scroll bar */
 }
 
 .main section:last-child {
@@ -239,34 +240,41 @@ section h2:first-child {
 h2::after {
 	content: "";
 	display: block;
-	width: 100%;
+	width: calc(100% - 100px);
 	height: 26px;
 	background-image: url("img/iamgrid_h2_bottom.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	opacity: 0.3;
-	margin-top: 0.5em;
+	margin-top: 0.5em 0;
+	margin-left: var(--slide-in-animation-horizontal-margins);
+	margin-right: var(--slide-in-animation-horizontal-margins);
 }
 
 hr {
 	border: 0;
-	width: 100%;
+	width: calc(100% - 100px);
 	height: 15px;
 	background-image: url("img/iamgrid_separator.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	opacity: 0.3;
-	margin: 0.8em 0;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
+	margin-left: var(--slide-in-animation-horizontal-margins);
+	margin-right: var(--slide-in-animation-horizontal-margins);
 }
 
 .hr--type-2 {
 	background-image: url("img/iamgrid_separator_2.svg");
-	margin: 2em 0;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
 }
 
 .hr--type-3 {
 	background-image: url("img/iamgrid_single_dot.svg");
-	margin: 0.8em 0;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
 }
 
 @keyframes slideInSlideOutAnimation {
@@ -288,7 +296,7 @@ hr {
 	}
 }
 
-@supports (animation-timeline: view()) {
+@supports (animation-timeline: auto) {
 	@media (prefers-reduced-motion: no-preference) {
 		hr, h2::after {
 			animation: slideInSlideOutAnimation;
@@ -350,7 +358,8 @@ hr {
 }
 
 .core-values__content hr {
-	margin: 0.75em 0;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 }
 
 .portfolio-radioset {
@@ -586,7 +595,8 @@ table tr th:last-child, table tr td:last-child {
 }
 
 .profiles__container hr {
-	margin: 0.5em 0 0.3em;
+	margin-top: 0.5em;
+	margin-bottom: 0.3em;
 }
 
 .demo-projects__content {
@@ -594,7 +604,8 @@ table tr th:last-child, table tr td:last-child {
 }
 
 .demo-projects__content hr {
-	margin: 0.4em 0;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
 }
 
 .demo-projects__ai-disclosure {
