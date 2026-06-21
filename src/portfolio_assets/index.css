@@ -58,11 +58,8 @@ body {
 
 html,
 body {
-	/* height: 100%; */
-	/* width: 100%; */
 	margin: 0;
 	padding: 0;
-	/* display: initial; */
 }
 
 a {
@@ -371,6 +368,20 @@ hr {
 
 .about__hello {
 	padding: 6px 0 1.3em;
+}
+
+.about__hello-top {
+	padding-bottom: 4px;
+}
+
+.about__hello-filigree {
+	background: url("img/iamgrid_hello_filigree.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	height: 27px;
+	width: 100%;
+	display: block;
 }
 
 .about__photo__proper {
