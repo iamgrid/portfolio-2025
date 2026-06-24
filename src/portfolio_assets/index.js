@@ -93,7 +93,7 @@ const IAG = {
 	copyEmailToClipboard: function () {
 		const functionSignature = "index.js@copyEmailToClipboard()";
 		console.log(functionSignature);
-		const email = "andy@iamgrid.co.uk";
+		const email = "contact@iamgrid.co.uk";
 		navigator.clipboard
 			.writeText(email)
 			.then(() => {
